@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇻🇳 胡志明市四天三夜旅遊簡報</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Sans+TC:wght@300;400;500;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#fdf6e3;--dark:#0a2020;--teal:#1a4a3a;
+  --gold:#c9a028;--gold-l:#f0c84a;
+  --text:#1e1e1e;--mid:#5a5a5a;--white:#fff;
+  --d1:#1a4a3a;--d2:#5a1a0a;--d3:#0a1a4a;--d4:#3a3a0a;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+
+/* ── COVER ───────────────────────────────────────────── */
+.cover{
+  position:relative;min-height:100vh;
+  background:linear-gradient(155deg,#051212 0%,#0d2b2b 35%,#1a4a3a 70%,#0d3a2a 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;padding:40px 24px;text-align:center;
+}
+.cover-dots{
+  position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='1.2' fill='%23c9a028' opacity='0.25'/%3E%3C/svg%3E") repeat;
+}
+.cover-glow{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 25% 60%,rgba(201,160,40,.18) 0%,transparent 55%),
+             radial-gradient(ellipse at 80% 25%,rgba(201,160,40,.1) 0%,transparent 40%);
+}
+.cover-badge{
+  position:relative;z-index:2;
+  background:rgba(201,160,40,.15);border:1px solid rgba(201,160,40,.45);
+  color:var(--gold-l);font-size:.72rem;font-weight:900;letter-spacing:.22em;
+  text-transform:uppercase;padding:6px 22px;border-radius:20px;margin-bottom:28px;
+}
+.cover-title{
+  position:relative;z-index:2;
+  font-family:'Playfair Display',serif;font-size:clamp(2.8rem,9vw,6rem);
+  color:#fff;line-height:1.05;margin-bottom:6px;
+}
+.cover-title .gold{color:var(--gold-l);}
+.cover-sub{
+  position:relative;z-index:2;
+  font-family:'Noto Sans TC',sans-serif;font-size:1rem;font-weight:300;
+  color:rgba(255,255,255,.6);margin-bottom:52px;letter-spacing:.06em;
+}
+.cover-stats{
+  position:relative;z-index:2;
+  display:flex;gap:36px;flex-wrap:wrap;justify-content:center;
+}
+.stat{text-align:center;}
+.stat-n{
+  display:block;font-family:'Playfair Display',serif;font-size:2.8rem;
+  color:var(--gold-l);line-height:1;
+}
+.stat-l{display:block;font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.12em;margin-top:2px;}
+.cover-line{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,transparent,var(--gold),var(--gold-l),var(--gold),transparent);
+  opacity:.6;
+}
+.scroll-hint{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.12em;
+  animation:bob 2.2s ease-in-out infinite;z-index:2;
+}
+.scroll-hint::after{content:'↓';font-size:1.1rem;}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(9px);}}
+
+/* ── NAV ─────────────────────────────────────────────── */
+.day-nav{
+  position:sticky;top:0;z-index:200;
+  background:#071a1a;display:flex;justify-content:center;
+  box-shadow:0 2px 24px rgba(0,0,0,.45);
+  overflow-x:auto;
+}
+.day-nav a{
+  color:rgba(255,255,255,.45);text-decoration:none;
+  font-family:'Noto Sans TC',sans-serif;font-size:.78rem;font-weight:700;
+  padding:15px 22px;transition:all .2s;
+  border-bottom:3px solid transparent;white-space:nowrap;
+}
+.day-nav a:hover,.day-nav a.active{color:#fff;border-bottom-color:var(--gold);}
+.day-nav a.n1:hover{border-bottom-color:#4db38a;}
+.day-nav a.n2:hover{border-bottom-color:#e07060;}
+.day-nav a.n3:hover{border-bottom-color:#5090e0;}
+.day-nav a.n4:hover{border-bottom-color:#d0b040;}
+
+/* ── DAY HEADER ──────────────────────────────────────── */
+.day-hdr{padding:60px 32px 44px;color:#fff;position:relative;overflow:hidden;}
+.dh1{background:linear-gradient(135deg,#071a14 0%,#0d3022 50%,#1a4a3a 100%);}
+.dh2{background:linear-gradient(135deg,#1a0a06 0%,#3a1208 50%,#6a2010 100%);}
+.dh3{background:linear-gradient(135deg,#06080f 0%,#0a1030 50%,#1a285a 100%);}
+.dh4{background:linear-gradient(135deg,#0f0f06 0%,#282808 50%,#484818 100%);}
+.dh-num{font-size:.65rem;font-weight:900;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-l);margin-bottom:10px;}
+.dh-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);margin-bottom:10px;}
+.dh-desc{font-size:.9rem;color:rgba(255,255,255,.6);max-width:620px;}
+.dh-timeline{margin-top:14px;font-size:.78rem;color:rgba(255,255,255,.38);line-height:1.8;}
+.dh-accent{
+  position:absolute;right:-10px;bottom:-40px;
+  font-size:180px;opacity:.04;line-height:1;
+  font-family:'Playfair Display',serif;font-style:italic;pointer-events:none;
+}
+
+/* ── STOPS WRAP ──────────────────────────────────────── */
+.stops{max-width:960px;margin:0 auto;padding:44px 20px 20px;}
+
+/* ── STOP CARD ───────────────────────────────────────── */
+.card{
+  background:var(--white);border-radius:18px;overflow:hidden;
+  box-shadow:0 3px 22px rgba(0,0,0,.08);
+  display:grid;grid-template-columns:280px 1fr;
+  transition:transform .25s,box-shadow .25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 34px rgba(0,0,0,.13);}
+.card.wide{grid-template-columns:1fr;}
+.card.rest{border-left:5px solid #c05020;}
+.card.nite{border-left:5px solid #302060;}
+.pic-wrap{position:relative;overflow:hidden;background:#d8d0c0;min-height:200px;}
+.pic-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.card:hover .pic-wrap img{transform:scale(1.04);}
+.num-badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(10,20,20,.72);color:var(--gold-l);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;
+  backdrop-filter:blur(4px);
+}
+.card-body{padding:26px;display:flex;flex-direction:column;gap:0;}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.tag{
+  font-size:.62rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 11px;border-radius:12px;
+}
+.ts{background:#e6f5ee;color:#1a4a30;}
+.tf{background:#fdefea;color:#8a3010;}
+.tn{background:#edeaf8;color:#38207a;}
+.th{background:#f0f0ec;color:#3a3a30;}
+.tm{background:#fdf4e0;color:#806800;}
+.tr{background:#e8f4fd;color:#1a4070;}
+.cname{font-family:'Noto Sans TC',sans-serif;font-size:1.2rem;font-weight:700;color:var(--dark);}
+.cvname{font-size:.78rem;color:var(--mid);font-style:italic;margin-top:2px;margin-bottom:10px;}
+.row-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px;}
+.rating{font-size:.82rem;color:#c9a028;font-weight:700;white-space:nowrap;}
+.rating span{color:var(--mid);font-weight:400;font-size:.72rem;}
+.info{display:flex;flex-direction:column;gap:5px;font-size:.76rem;color:var(--mid);margin-bottom:13px;}
+.desc{font-size:.86rem;color:#454545;line-height:1.75;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.chip{
+  background:#fdf0ea;color:#8b3010;
+  font-size:.7rem;font-weight:700;padding:4px 13px;border-radius:20px;
+}
+.chip.b{background:#e8f5ee;color:#1a4a30;}
+
+/* ── TRANSPORT ───────────────────────────────────────── */
+.xport{
+  display:flex;align-items:center;gap:16px;
+  padding:14px 32px;max-width:960px;margin:0 auto;
+}
+.xline{flex:1;height:1px;background:linear-gradient(to right,transparent,#ccc,transparent);}
+.xbadge{
+  display:flex;align-items:center;gap:8px;
+  background:var(--white);border:1px solid #e0d8c8;border-radius:26px;
+  padding:8px 18px;box-shadow:0 1px 8px rgba(0,0,0,.06);
+  font-size:.78rem;color:var(--mid);white-space:nowrap;
+}
+.xbadge strong{color:var(--text);}
+.xbadge .gc{color:var(--gold);font-size:.72rem;}
+
+/* ── DAYTRIP ─────────────────────────────────────────── */
+.dt-wrap{max-width:960px;margin:0 auto 28px;padding:0 20px;}
+.dt-inner{background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 3px 22px rgba(0,0,0,.08);}
+.dt-img{position:relative;height:320px;overflow:hidden;}
+.dt-img img{width:100%;height:100%;object-fit:cover;}
+.dt-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,26,58,.85) 0%,rgba(10,26,58,.1) 60%);
+  display:flex;align-items:flex-end;padding:28px;
+}
+.dt-overlay h3{
+  font-family:'Playfair Display',serif;color:#fff;font-size:1.9rem;line-height:1.2;
+  text-shadow:0 2px 12px rgba(0,0,0,.5);
+}
+.dt-body{padding:30px;}
+.dt-note{font-size:.88rem;color:var(--mid);line-height:1.75;margin-bottom:20px;}
+.dt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;}
+.act{
+  background:#f0f8f4;border-radius:10px;padding:13px 16px;
+  display:flex;align-items:center;gap:10px;
+  font-size:.84rem;color:#1a4a30;font-weight:600;
+}
+.act .e{font-size:1.3rem;}
+
+/* ── DAY 4 ───────────────────────────────────────────── */
+.d4-card{
+  max-width:960px;margin:0 auto;padding:0 20px 40px;
+}
+.d4-inner{background:var(--white);border-radius:18px;padding:36px;box-shadow:0 3px 22px rgba(0,0,0,.08);}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px;}
+.shop-item{
+  background:#f8f5ea;border-radius:10px;padding:13px 16px;
+  display:flex;align-items:center;gap:10px;
+  font-size:.83rem;color:#4a3a08;font-weight:600;
+}
+.flight-box{
+  text-align:center;padding:48px 24px;
+  background:linear-gradient(135deg,#071a14,#1a4a3a);
+  border-radius:18px;color:#fff;margin-top:24px;
+}
+.flight-box .fe{font-size:3.5rem;margin-bottom:14px;}
+.flight-box h3{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold-l);margin-bottom:8px;}
+.flight-box p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.8;}
+
+/* ── TIPS ────────────────────────────────────────────── */
+.tips-sec{background:var(--dark);padding:70px 32px;}
+.tips-ttl{
+  font-family:'Playfair Display',serif;font-size:2.2rem;
+  color:var(--gold-l);text-align:center;margin-bottom:44px;
+}
+.tips-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.tip{background:rgba(255,255,255,.04);border:1px solid rgba(201,160,40,.18);border-radius:14px;padding:26px;}
+.tip-i{font-size:2rem;margin-bottom:12px;}
+.tip-t{font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:.9rem;color:var(--gold-l);margin-bottom:8px;}
+.tip-c{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.75;}
+
+/* ── FOOTER ──────────────────────────────────────────── */
+.footer{background:#040d0d;color:rgba(255,255,255,.25);text-align:center;padding:26px;font-size:.78rem;line-height:1.8;}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media(max-width:680px){
+  .card{grid-template-columns:1fr;}
+  .pic-wrap{height:210px;}
+  .day-hdr{padding:40px 20px 30px;}
+  .xport{padding:10px 20px;}
+  .dt-img{height:230px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ COVER ══════════════════ -->
+<section class="cover">
+  <div class="cover-dots"></div>
+  <div class="cover-glow"></div>
+  <div class="cover-badge">✈ 家庭旅遊完整簡報</div>
+  <h1 class="cover-title">
+    胡志明市<br>
+    <span class="gold">四天三夜</span>
+  </h1>
+  <p class="cover-sub">四大一小 · 精華景點 · 道地美食 · 湄公河一日遊</p>
+  <div class="cover-stats">
+    <div class="stat"><span class="stat-n">4</span><span class="stat-l">天 / 3 夜</span></div>
+    <div class="stat"><span class="stat-n">10</span><span class="stat-l">景點</span></div>
+    <div class="stat"><span class="stat-n">6</span><span class="stat-l">餐廳</span></div>
+    <div class="stat"><span class="stat-n">5</span><span class="stat-l">旅伴</span></div>
+  </div>
+  <div class="cover-line"></div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav class="day-nav">
+  <a href="#d1" class="n1">第一天 ✈ 抵達初探</a>
+  <a href="#d2" class="n2">第二天 🏛 歷史探索</a>
+  <a href="#d3" class="n3">第三天 🚣 湄公河</a>
+  <a href="#d4" class="n4">第四天 ✈ 返台</a>
+</nav>
+
+<!-- ══════════════════ DAY 1 ══════════════════ -->
+<section id="d1">
+  <div class="day-hdr dh1">
+    <div class="dh-num">DAY 01 · 第一天</div>
+    <h2 class="dh-title">抵達 · 市中心初探 🌿</h2>
+    <p class="dh-desc">中午抵達後輕鬆遊覽第一郡精華景點，傍晚品嚐道地越南料理，夜遊裴援徒步街感受南洋熱帶氛圍。</p>
+    <p class="dh-timeline">
+      ✈ 07:50 台灣出發&nbsp;&nbsp;→&nbsp;&nbsp;🛬 12:00 抵達胡志明市&nbsp;&nbsp;→&nbsp;&nbsp;🏨 Check in 飯店（建議第一郡）<br>
+      🕐 14:00 開始行程
+    </p>
+    <div class="dh-accent">1</div>
+  </div>
+
+  <div class="stops">
+
+    <!-- 咖啡公寓 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">1</div>
+        <img src="images/01_cafe_apartment.jpg" alt="咖啡公寓" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag ts">☕ 咖啡</span><span class="tag ts">📸 打卡熱點</span></div>
+        <div class="row-top">
+          <div><div class="cname">咖啡公寓</div><div class="cvname">The Café Apartment · 42 Nguyễn Huệ, Quận 1</div></div>
+          <div class="rating">⭐ 4.4 <span>(1,594則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 08:00 – 00:00（全週開放）</span>
+          <span>📍 第一郡阮惠步行街上，各景點步行可達</span>
+        </div>
+        <p class="desc">老舊公寓改建的 <strong>8 層樓垂直咖啡街</strong>，每層有截然不同風格的咖啡廳、精品店與餐廳。強烈建議<strong>走樓梯</strong>逐層探索，比搭電梯更能感受每層的驚喜！電梯需另付費約 30,000 VND/人。是胡志明市最具代表性的 Instagram 打卡景點，俯瞰阮惠步行街的視角絕美。</p>
+        <div class="chips"><span class="chip">🏢 8層各異主題</span><span class="chip">🌆 俯瞰步行街</span><span class="chip">🎨 精品小店</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 5 分鐘</div><div class="xline"></div></div>
+
+    <!-- 書街 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">2</div>
+        <img src="images/02_book_street.jpg" alt="書街" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag ts">📚 文化</span><span class="tag tm">🎁 伴手禮</span></div>
+        <div class="row-top">
+          <div><div class="cname">胡志明市書街</div><div class="cvname">Đường Sách · 2 Nguyễn Văn Bình, Quận 1</div></div>
+          <div class="rating">⭐ 4.6 <span>(12,217則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 08:00 – 21:00（全週，夜晚燈飾更美）</span>
+          <span>📍 西貢郵政局旁，步行即達</span>
+        </div>
+        <p class="desc">胡志明市最有文青氣息的書市街道，沿途多家獨立書店、明信片攤和越南文創商品。夜晚串燈點亮後更加浪漫迷人。可在此<strong>選購明信片寄回台灣</strong>，也有英文越南旅遊書可帶走當紀念。</p>
+        <div class="chips"><span class="chip">✉️ 明信片寄台灣</span><span class="chip b">🎨 越南文創品</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 3 分鐘</div><div class="xline"></div></div>
+
+    <!-- 郵政局 + 聖母教堂 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">3</div>
+        <img src="images/03_post_office.jpg" alt="西貢郵政局" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag th">🏛️ 歷史建築</span><span class="tag ts">⛪ 宗教</span></div>
+        <div class="row-top">
+          <div><div class="cname">西貢中心郵政局 + 聖母教堂</div><div class="cvname">Bưu điện Trung tâm Sài Gòn · 02 Công trường Công xã Paris, Q.1</div></div>
+          <div class="rating">⭐ 4.4 <span>(5,424則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 平日 07:30–18:00 ｜ 週日 08:00–17:00</span>
+          <span>📍 兩景點僅相距 50 公尺，一次參觀兩個</span>
+        </div>
+        <p class="desc">1886年法國殖民時期建造的宏偉郵政局，<strong>優雅鑄鐵拱形天花板</strong>至今令人嘆為觀止，功能完整至今仍在運作。隔壁的<strong>聖母教堂（Notre-Dame）</strong>正在整修中，但外觀仍值得拍照留念。可在郵局選購越南特色切花郵票，寄明信片回台灣是很有紀念意義的體驗！</p>
+        <div class="chips"><span class="chip">📮 寄明信片回台灣</span><span class="chip b">🏛️ 法式拱頂建築</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 5 分鐘&nbsp;<span class="gc">≈ 15,000 VND</span></div><div class="xline"></div></div>
+
+    <!-- Hoang's Kitchen -->
+    <div class="card rest">
+      <div class="pic-wrap">
+        <div class="num-badge">🍽️</div>
+        <img src="images/04_hoangs_kitchen.jpg" alt="Hoang's Kitchen" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tf">🍜 晚餐</span><span class="tag tf">🥗 蔬食友善</span></div>
+        <div class="row-top">
+          <div><div class="cname">Hoang's Kitchen</div><div class="cvname">Vietnamese Cuisine & Vegan Food · 13/1 Lê Thánh Tôn, Q.1</div></div>
+          <div class="rating">⭐ 4.9 <span>(710則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 10:30 – 23:30（全週開放）</span>
+          <span>📞 +84 912 993 203 ｜ 英語服務流利</span>
+        </div>
+        <p class="desc">評分高達 <strong>4.9 顆星</strong>的超人氣越南家常料理！炸春捲酥脆多汁、豬肉湯頭濃郁鮮美。特別推薦：兼有完整的<strong>蔬食（Vegan）選項</strong>，全家一起用餐完全沒有問題。服務生英語流利，點餐輕鬆無障礙。</p>
+        <div class="chips"><span class="chip">🥟 炸春捲</span><span class="chip">🍖 烤豬肉</span><span class="chip">🥗 蔬食選項</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 10 分鐘&nbsp;<span class="gc">≈ 30,000 VND</span></div><div class="xline"></div></div>
+
+    <!-- 裴援徒步街 -->
+    <div class="card nite">
+      <div class="pic-wrap">
+        <div class="num-badge">🌃</div>
+        <img src="images/05_bui_vien.jpg" alt="裴援徒步街" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tn">🌃 夜生活</span><span class="tag tn">🎵 現場音樂</span></div>
+        <div class="row-top">
+          <div><div class="cname">裴援徒步街</div><div class="cvname">Bùi Viện Walking Street · Phường Phạm Ngũ Lão, Q.1</div></div>
+          <div class="rating">⭐ 4.3 <span>(26,212則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 全天開放 · 🌟 最佳時段：每晚 19:00 後封街</span>
+          <span>📍 第一郡背包客區核心地帶</span>
+        </div>
+        <p class="desc">胡志明市最熱鬧的夜市徒步街！每晚 7 點起封街成行人專區，霓虹燈光閃爍、現場音樂演奏不間斷，路邊酒吧「買一送一」啤酒優惠隨處可見。帶小孩感受南洋夜生活氣氛即可，<strong>建議不要超過 21:00</strong>，保留體力迎接第二天行程。</p>
+        <div class="chips"><span class="chip">🍺 買一送一啤酒</span><span class="chip">🎸 現場音樂</span><span class="chip">💡 霓虹燈光秀</span></div>
+      </div>
+    </div>
+
+  </div><!-- /stops -->
+</section>
+
+<!-- ══════════════════ DAY 2 ══════════════════ -->
+<section id="d2">
+  <div class="day-hdr dh2">
+    <div class="dh-num">DAY 02 · 第二天</div>
+    <h2 class="dh-title">新定區 · 戰爭博物館 🏛</h2>
+    <p class="dh-desc">前往第三郡探訪夢幻粉色教堂與傳統市場，接著參觀越戰歷史博物館，下午逛范五老街，晚上享用米其林推薦餐廳。</p>
+    <p class="dh-timeline">🌅 全日行程 · 建議 09:00 出發</p>
+    <div class="dh-accent">2</div>
+  </div>
+
+  <div class="stops">
+
+    <!-- 新定教堂 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">1</div>
+        <img src="images/06_tan_dinh_church.jpg" alt="新定教堂" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag ts">⛪ 宗教景點</span><span class="tag th">🏛️ 法式殖民</span><span class="tag ts">📸 打卡</span></div>
+        <div class="row-top">
+          <div><div class="cname">新定教堂（粉色教堂）</div><div class="cvname">Nhà Thờ Tân Định · 289 Hai Bà Trưng, Quận 3</div></div>
+          <div class="rating">⭐ 4.4 <span>(8,876則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 平日 08:00–11:00, 14:00–17:00 ｜ ⚠️ 週六不開放</span>
+          <span>📍 第三郡海霸翁路 289 號 · 距市場步行 3 分鐘</span>
+        </div>
+        <p class="desc">1870年代法國殖民時期建造的天主教堂，全胡志明市最夢幻的地標之一！<strong>哥德式羅馬風格搭配大膽的鮮豔粉紅色外觀</strong>，在南亞天主教堂中絕無僅有。⚠️ 目前部分整修中，出發前建議確認開放狀況；週六固定不開放。整修期間外觀仍可拍照打卡。</p>
+        <div class="chips"><span class="chip">🌸 全市最夢幻粉色</span><span class="chip b">📿 1870年代法式殖民建築</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 3 分鐘（300公尺）</div><div class="xline"></div></div>
+
+    <!-- 新定市場 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">2</div>
+        <img src="images/07_tan_dinh_market.jpg" alt="新定市場" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tm">🛒 傳統市場</span><span class="tag tm">🎁 伴手禮</span></div>
+        <div class="row-top">
+          <div><div class="cname">新定市場</div><div class="cvname">Chợ Tân Định · 314-336 Hai Bà Trưng, Quận 3</div></div>
+          <div class="rating">⭐ 4.2 <span>(10,151則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 06:00 – 18:00（全週開放）</span>
+          <span>📍 與粉色教堂同條街，步行 3 分鐘內</span>
+        </div>
+        <p class="desc">與粉色教堂僅 300 公尺的傳統在地市場，販售乾果腰果、布料服飾及越南傳統服飾（Áo dài）等。<strong>有攤販說普通話、廣東話</strong>，溝通非常方便！記得嚐試現榨新鮮果汁。推薦購買：帶殼腰果（100g/25,000 VND）、龍眼乾、腰果糖。</p>
+        <div class="chips"><span class="chip">🥜 在地帶殼腰果</span><span class="chip">🧃 現榨鮮果汁</span><span class="chip b">👘 越南傳統服飾</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 10 分鐘&nbsp;<span class="gc">≈ 25,000 VND</span></div><div class="xline"></div></div>
+
+    <!-- 戰爭博物館 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">3</div>
+        <img src="images/08_war_museum.jpg" alt="戰爭博物館" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag th">🏛️ 歷史博物館</span><span class="tag th">🪖 越戰歷史</span></div>
+        <div class="row-top">
+          <div><div class="cname">戰爭博物館</div><div class="cvname">Bảo tàng Chứng tích Chiến tranh · Phường 6, Quận 3</div></div>
+          <div class="rating">⭐ 4.5 <span>(40,317則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 07:30 – 17:30（全週開放，不休館）</span>
+          <span>📍 第三郡 · 建議停留 1.5–2 小時</span>
+        </div>
+        <p class="desc">越戰歷史<strong>必訪場館</strong>，館外真實展示戰車、戰鬥機、大砲等軍事武器，館內有豐富歷史照片文獻。部分展區畫面較衝擊（橙劑效應、傷亡紀錄），<strong>帶孩子建議選擇性參觀一樓的戰爭器械戶外展區</strong>，避開較血腥的樓層。參觀後對越戰歷史會有全新的認識與感受。</p>
+        <div class="chips"><span class="chip">🪖 真實戰爭武器</span><span class="chip b">⏱️ 建議留 1.5-2 小時</span><span class="chip">👧 帶孩子選樓層</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 5 分鐘&nbsp;<span class="gc">≈ 15,000 VND</span></div><div class="xline"></div></div>
+
+    <!-- 錦麗河粉 -->
+    <div class="card rest">
+      <div class="pic-wrap">
+        <div class="num-badge">🍜</div>
+        <img src="images/09_pho_le.jpg" alt="錦麗河粉" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tf">🍜 午餐</span><span class="tag tf">⭐ 米其林推薦</span></div>
+        <div class="row-top">
+          <div><div class="cname">錦麗河粉</div><div class="cvname">Phở Lệ · 303-305 Võ Văn Tần, Quận 3</div></div>
+          <div class="rating">⭐ 4.2 <span>(2,132則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 07:00 – 22:00（全週）</span>
+          <span>📞 +84 908 130 100 ｜ 距戰爭博物館 5 分鐘車程</span>
+        </div>
+        <p class="desc">米其林推薦的胡志明市知名<strong>牛肉河粉老店</strong>。湯頭以牛大骨長時間熬製，清甜不腥；牛肉新鮮鮮嫩，配上豐富香草更添層次風味。建議點「牛腩混合（Phở Tái Nạm）」，料最豐富。早點去不需排隊，份量十足。</p>
+        <div class="chips"><span class="chip">🥩 牛骨清甜湯底</span><span class="chip b">🌿 新鮮香草配料</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 10 分鐘&nbsp;<span class="gc">≈ 25,000 VND</span></div><div class="xline"></div></div>
+
+    <!-- 范五老街 -->
+    <div class="card">
+      <div class="pic-wrap">
+        <div class="num-badge">5</div>
+        <img src="images/10_pham_ngu_lao.jpg" alt="范五老街" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tm">🛍️ 購物</span><span class="tag ts">☕ 咖啡廳</span></div>
+        <div class="row-top">
+          <div><div class="cname">范五老街</div><div class="cvname">Phạm Ngũ Lão Street · Quận 1</div></div>
+          <div class="rating">⭐ 4.5 <span></span></div>
+        </div>
+        <div class="info">
+          <span>🕐 全天開放（商家大多 09:00 – 22:00）</span>
+          <span>📍 第一郡背包客區 · 裴援徒步街附近</span>
+        </div>
+        <p class="desc">胡志明市最著名的背包客聚集區，各式越南咖啡館、紀念品店、小吃攤集中，是<strong>採購伴手禮的絕佳地點</strong>。推薦必買：越南咖啡豆（G7/Trung Nguyên）、蛋咖啡豆、椰子糖、辣椒醬。可順逛旁邊的裴援街感受下午的悠閒氛圍。</p>
+        <div class="chips"><span class="chip">☕ 越南咖啡豆</span><span class="chip">🌶️ 辣椒醬</span><span class="chip b">🥥 椰子糖</span></div>
+      </div>
+    </div>
+
+    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 5 分鐘&nbsp;<span class="gc">≈ 15,000 VND</span></div><div class="xline"></div></div>
+
+    <!-- 胖媽廚房 -->
+    <div class="card rest">
+      <div class="pic-wrap">
+        <div class="num-badge">🍽️</div>
+        <img src="images/11_bep_me_in.jpg" alt="胖媽廚房" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tf">🍽️ 晚餐</span><span class="tag tf">⭐ 米其林推薦</span></div>
+        <div class="row-top">
+          <div><div class="cname">胖媽廚房</div><div class="cvname">Bếp Mẹ Ín · 136/9 Lê Thánh Tôn, Quận 1</div></div>
+          <div class="rating">⭐ 4.5 <span>(11,380則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 10:30 – 22:30（全週）</span>
+          <span>📞 +84 28 2211 1119 ｜ ⚠️ 強烈建議提前訂位，尤其週末</span>
+        </div>
+        <p class="desc">米其林推薦的越南家常料理！以家庭私廚風格著稱，每道菜都充滿溫暖家鄉滋味。<strong>招牌越式薄餅（Bánh Xèo）</strong>皮薄酥脆、內餡飽滿，是必點菜色。椰子炒飯香氣誘人，炭烤牛肉串外焦內嫩，全家人都愛！週末非常熱門，建議提前訂位。</p>
+        <div class="chips"><span class="chip">🥥 椰子炒飯</span><span class="chip">🥞 越式薄餅 Bánh Xèo</span><span class="chip b">🥩 炭烤牛肉串</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ DAY 3 ══════════════════ -->
+<section id="d3">
+  <div class="day-hdr dh3">
+    <div class="dh-num">DAY 03 · 第三天</div>
+    <h2 class="dh-title">湄公河三角洲一日遊 🚣</h2>
+    <p class="dh-desc">全天出發前往湄公河三角洲，體驗搭船遊河、竹筏穿梭椰林水道，品嚐熱帶水果與農家料理，感受截然不同的南越鄉村生活。</p>
+    <p class="dh-timeline">🚌 07:00–07:30 飯店接送集合出發&nbsp;&nbsp;→&nbsp;&nbsp;🌙 18:30 返回胡志明市</p>
+    <div class="dh-accent">3</div>
+  </div>
+
+  <div class="stops">
+
+    <!-- 湄公河 daytrip -->
+    <div class="dt-wrap" style="padding:0;">
+    <div class="dt-inner">
+      <div class="dt-img">
+        <img src="images/12_mekong_delta.jpg" alt="湄公河" loading="lazy">
+        <div class="dt-overlay">
+          <h3>湄公河三角洲一日遊<br><span style="font-size:1rem;color:rgba(255,255,255,.7);font-family:'Noto Sans TC',sans-serif;font-weight:300;">My Tho / Ben Tre · 全程 10–11 小時</span></h3>
+        </div>
+      </div>
+      <div class="dt-body">
+        <p class="dt-note">建議參加包含<strong>飯店接送</strong>的 My Tho / Ben Tre 路線一日遊，可請飯店協助預訂。全程約 10–11 小時，適合各年齡層，孩子尤其喜歡划竹筏和餵食動物的體驗！<br><br>
+        💰 費用：約 <strong>600,000–850,000 VND/人</strong>（含午餐、接送），需提前預訂，旺季（11–4月）容易額滿。</p>
+        <div class="dt-grid">
+          <div class="act"><span class="e">⛵</span> 搭大船遊湄公河主流</div>
+          <div class="act"><span class="e">🎋</span> 竹筏穿越椰林水道</div>
+          <div class="act"><span class="e">🥥</span> 參觀椰糖工廠</div>
+          <div class="act"><span class="e">🍍</span> 品嚐熱帶水果盤</div>
+          <div class="act"><span class="e">🍱</span> 傳統農家午餐</div>
+          <div class="act"><span class="e">🐍</span> 農村生態體驗</div>
+          <div class="act"><span class="e">🎵</span> 南越傳統音樂表演</div>
+          <div class="act"><span class="e">🌾</span> 水鄉風光欣賞</div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="xport" style="max-width:960px;margin:0 auto;"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;返回市區約 10 分鐘&nbsp;<span class="gc">≈ 25,000 VND</span></div><div class="xline"></div></div>
+
+  <div class="stops" style="padding-top:0;">
+    <!-- Quan Ngon -->
+    <div class="card rest">
+      <div class="pic-wrap">
+        <div class="num-badge">🍜</div>
+        <img src="images/13_quan_ngon.jpg" alt="Quán Ngon" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag tf">🍜 晚餐</span><span class="tag tf">🥢 北越米線</span></div>
+        <div class="row-top">
+          <div><div class="cname">Quán Ngon - Bún Chả Hà Nội</div><div class="cvname">越南米線 · 209 Đề Thám, Quận 1</div></div>
+          <div class="rating">⭐ 4.8 <span>(1,924則評論)</span></div>
+        </div>
+        <div class="info">
+          <span>🕐 09:30 – 22:30（全週）</span>
+          <span>📞 +84 971 718 888 ｜ 裴援街旁，地點超便利</span>
+        </div>
+        <p class="desc">道地<strong>北越河內米線（Bún Chả Hà Nội）</strong>！香氣四溢的炭烤豬肉搭配新鮮米線，配以清爽魚露湯底，令人回味無窮。份量非常慷慨，<strong>建議一份二人分食</strong>，可再多點一份越式春捲（Chả Giò）。位在裴援街旁，用餐後可順便夜遊。</p>
+        <div class="chips"><span class="chip">🥩 炭烤豬肉</span><span class="chip">🍜 新鮮米線</span><span class="chip b">💡 份量超大可分食</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ DAY 4 ══════════════════ -->
+<section id="d4">
+  <div class="day-hdr dh4">
+    <div class="dh-num">DAY 04 · 第四天</div>
+    <h2 class="dh-title">輕鬆早晨 · 採購返台 ✈</h2>
+    <p class="dh-desc">早晨自由活動把握最後機會採購伴手禮，中午收拾行李，14:00 前往新山一機場搭乘返台班機。</p>
+    <p class="dh-timeline">🛍️ 09:00 採購&nbsp;&nbsp;→&nbsp;&nbsp;🧳 12:00 回飯店&nbsp;&nbsp;→&nbsp;&nbsp;🚗 14:00 前往機場&nbsp;&nbsp;→&nbsp;&nbsp;✈ 下午 返台</p>
+    <div class="dh-accent">4</div>
+  </div>
+
+  <div class="d4-card">
+    <div class="d4-inner">
+      <div class="tags"><span class="tag tm">🛍️ 最後採購</span><span class="tag ts">☕ 告別早餐</span></div>
+      <div style="margin-top:14px;">
+        <div class="cname" style="margin-bottom:6px;">早上自由活動：書街 / 范五老街補購伴手禮</div>
+        <p class="desc">把握返台前的最後時光，前往書街或范五老街採購越南特色伴手禮。以下是最推薦的採購清單：</p>
+      </div>
+      <div class="shop-grid">
+        <div class="shop-item"><span style="font-size:1.3rem;">☕</span> 越南咖啡豆</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🌶️</span> 辣椒醬 / 蝦醬</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🥜</span> 帶殼腰果</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🍵</span> 越南蓮花茶</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🌿</span> 胡椒粒（富國島）</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🧴</span> 虎標萬金油</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🥥</span> 椰子糖 / 椰奶</div>
+        <div class="shop-item"><span style="font-size:1.3rem;">🎨</span> 越南漆器工藝品</div>
+      </div>
+    </div>
+
+    <div class="xport" style="padding:24px 0;max-width:100%;"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;前往新山一機場約 30–45 分鐘&nbsp;<span class="gc">⚠️ 建議 14:00 從飯店出發</span></div><div class="xline"></div></div>
+
+    <div class="flight-box">
+      <div class="fe">✈️</div>
+      <h3>下午班機 · 返台</h3>
+      <p>新山一國際機場（Sân bay Tân Sơn Nhất / SGN）<br>→ 台中清泉崗 RMQ ｜ 台北桃園 TPE<br><br>
+      市區至機場約 30–45 分鐘（視塞車狀況），<br>建議 14:00 準時出發，預留充裕時間辦理登機手續。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TIPS ══════════════════ -->
+<section class="tips-sec">
+  <h2 class="tips-ttl">旅遊實用小提醒 💡</h2>
+  <div class="tips-grid">
+    <div class="tip"><div class="tip-i">🚗</div><div class="tip-t">交通：全程 Grab 最安心</div><p class="tip-c">市區建議全程使用 Grab App（類似台灣 Uber），可選 GrabCar 5人座剛好全家坐。比路邊計程車便宜且安全，不怕被多收費。建議出發前在台灣先下載好，綁定信用卡使用更方便。</p></div>
+    <div class="tip"><div class="tip-i">💰</div><div class="tip-t">貨幣：越盾快速換算法</div><p class="tip-c">1 TWD ≈ 780 VND。快速算法：看到越盾金額，刪掉後面4個零，大約就是台幣。例如 100,000 VND ≈ NT$128。建議在機場兌換部分現金（約 NT$2,000/人），大型商場可刷卡，路邊攤和市場現金為主。</p></div>
+    <div class="tip"><div class="tip-i">🏨</div><div class="tip-t">住宿：強烈建議第一郡</div><p class="tip-c">建議下榻第一郡（Quận 1），各大景點大多在 15 分鐘車程內。阮惠步行街、書街、咖啡公寓幾乎步行可達，非常方便。住在這區也讓孩子走路就能感受到城市核心的活力。</p></div>
+    <div class="tip"><div class="tip-i">📅</div><div class="tip-t">注意：教堂開放時間</div><p class="tip-c">新定教堂（粉色）週六固定不開放，且目前整修中，出發前建議再次確認。聖母教堂也在長達10年的修繕工程中，外觀可拍照，但無法進入。行程安排請留意。</p></div>
+    <div class="tip"><div class="tip-i">🌡️</div><div class="tip-t">天氣：全年高溫潮濕</div><p class="tip-c">胡志明市全年氣溫 28–35°C，帶小孩請務必穿輕薄透氣衣物、準備帽子和防曬乳，勤補水！餐廳和景點大多有冷氣可以避暑。若為雨季（5–11月）建議隨身帶輕薄摺疊雨衣。</p></div>
+    <div class="tip"><div class="tip-i">🍽️</div><div class="tip-t">餐廳：熱門餐廳記得訂位</div><p class="tip-c">胖媽廚房（Bếp Mẹ Ín）和 Hoang's Kitchen 都非常熱門，建議提前預約，尤其週末晚餐時段。可請飯店電話代訂，或在 Facebook 官方粉絲頁上傳訊息預約，通常回覆很快。</p></div>
+    <div class="tip"><div class="tip-i">🚣</div><div class="tip-t">湄公河一日遊：務必提前訂</div><p class="tip-c">建議在台灣出發前或抵達第一天立即委託飯店安排，旺季（11月–4月）非常容易額滿！費用約 600,000–850,000 VND/人，通常含飯店雙向接送和農家午餐。</p></div>
+    <div class="tip"><div class="tip-i">👧</div><div class="tip-t">帶孩子注意事項</div><p class="tip-c">戰爭博物館建議只逛一樓戶外的武器展區，避開2、3樓較衝擊的展覽。裴援夜市熱鬧但建議不超過21:00。越南菜口味相對清淡，孩子接受度高。湄公河行程孩子超愛，是全程亮點！</p></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>🇻🇳 胡志明市四天三夜家庭旅遊完整簡報 · 四大一小精心規劃行程</p>
+  <p>景點及餐廳資訊可能隨時間更新，出發前建議再次確認最新營業狀況及開放時間。</p>
+</footer>
+
+</body>
+</html>
