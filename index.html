@@ -234,12 +234,60 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
 .footer{background:#040d0d;color:rgba(255,255,255,.25);text-align:center;padding:26px;font-size:.78rem;line-height:1.8;}
 
 /* ── RESPONSIVE ──────────────────────────────────────── */
+
+/* Tablet (≤900px): shrink image column */
+@media(max-width:900px){
+  .card{grid-template-columns:200px 1fr;}
+  .stops{padding:36px 16px 16px;}
+  .dt-wrap{padding:0 16px;}
+  .d4-card{padding:0 16px 32px;}
+  .tips-sec{padding:56px 20px;}
+}
+
+/* Phablet (≤680px): stack cards */
 @media(max-width:680px){
   .card{grid-template-columns:1fr;}
-  .pic-wrap{height:210px;}
-  .day-hdr{padding:40px 20px 30px;}
-  .xport{padding:10px 20px;}
-  .dt-img{height:230px;}
+  .pic-wrap{height:220px;}
+  .card-body{padding:20px;}
+  .day-hdr{padding:36px 18px 28px;}
+  .stops{padding:28px 12px 12px;}
+  .xport{padding:10px 12px;}
+  .xbadge{font-size:.74rem;padding:7px 14px;}
+  .dt-img{height:210px;}
+  .dt-body{padding:22px 18px;}
+  .d4-inner{padding:24px 18px;}
+  .tips-sec{padding:48px 14px;}
+  .tips-grid{grid-template-columns:1fr;}
+  .flight-box{padding:36px 18px;}
+}
+
+/* Mobile (≤480px): tighten everything */
+@media(max-width:480px){
+  .cover-sub{font-size:.88rem;margin-bottom:36px;}
+  .cover-stats{gap:22px;}
+  .stat-n{font-size:2.2rem;}
+  .cname{font-size:1.05rem;}
+  .cvname{font-size:.73rem;}
+  .row-top{flex-direction:column;align-items:flex-start;gap:3px;}
+  .rating{font-size:.78rem;}
+  .tags{gap:4px;}
+  .tag{font-size:.58rem;padding:2px 8px;}
+  .chips{gap:6px;}
+  .chip{font-size:.65rem;padding:3px 10px;}
+  .desc{font-size:.82rem;}
+  .info{font-size:.73rem;}
+  .dh-desc{font-size:.82rem;}
+  .dh-timeline{font-size:.74rem;}
+  .xbadge{white-space:normal;flex-wrap:wrap;justify-content:center;text-align:center;gap:4px;}
+  .dt-grid{grid-template-columns:1fr 1fr;}
+  .shop-grid{grid-template-columns:1fr 1fr;}
+  .tips-ttl{font-size:1.8rem;margin-bottom:28px;}
+  .tip{padding:18px;}
+  .tip-c{font-size:.8rem;}
+  .footer{font-size:.73rem;padding:20px;}
+  /* Currency converter: stack vertically */
+  #cx-row{grid-template-columns:1fr !important;gap:10px;}
+  .cx-sep{display:none !important;}
 }
 </style>
 </head>
@@ -739,7 +787,7 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
         <div class="tip-i" style="margin:0;">💱</div>
         <div class="tip-t" style="margin:0;font-size:1rem;">即時貨幣雙向換算工具</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;">
+      <div id="cx-row" style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;">
 
         <!-- TWD -->
         <div>
@@ -751,7 +799,7 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
           <div style="font-size:.68rem;color:rgba(255,255,255,.25);margin-top:5px;text-align:right;">1 TWD ≈ 780 VND ≈ 0.031 USD</div>
         </div>
 
-        <div style="color:rgba(255,255,255,.2);font-size:1.4rem;text-align:center;">⇄</div>
+        <div class="cx-sep" style="color:rgba(255,255,255,.2);font-size:1.4rem;text-align:center;">⇄</div>
 
         <!-- VND -->
         <div>
@@ -763,7 +811,7 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
           <div style="font-size:.68rem;color:rgba(255,255,255,.25);margin-top:5px;text-align:right;">1,000 VND ≈ NT$1.28 ≈ $0.04</div>
         </div>
 
-        <div style="color:rgba(255,255,255,.2);font-size:1.4rem;text-align:center;">⇄</div>
+        <div class="cx-sep" style="color:rgba(255,255,255,.2);font-size:1.4rem;text-align:center;">⇄</div>
 
         <!-- USD -->
         <div>
