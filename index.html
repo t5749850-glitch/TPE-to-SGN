@@ -593,18 +593,14 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
 })();
 </script>
 
-<!-- ── ITINERARY LOADER ──────────────────────────────────── -->
 <script>
 (function(){
-  var GIST_URL = 'https://gist.githubusercontent.com/t5749850-glitch/8d7c2b26ccd5d53fce169a2ee712e6da/raw/itinerary-data.html';
-
   var root = document.getElementById('itinerary-root');
   var nav  = document.getElementById('day-nav');
 
   function inject(html){
     var navMatch = html.match(/<!-- nav -->([\s\S]*?)<!-- \/nav -->/);
     if(navMatch && nav) nav.innerHTML = navMatch[1];
-
     var secMatch = html.match(/<!-- sections -->([\s\S]*?)<!-- \/sections -->/);
     if(secMatch && root){
       root.innerHTML = secMatch[1];
@@ -622,17 +618,13 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
       '⚠️ 行程資料載入失敗<br><small style="font-size:.8rem;opacity:.6;">' + msg + '</small></p>';
   }
 
-  // 永遠先嘗試 Gist（支援 CORS，本機也能用）
-  fetch(GIST_URL, {cache:'no-cache'})
-    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
-    .then(inject)
-    .catch(function(err){
-      // Gist 失敗時（例如本機無網路）再嘗試讀同目錄
-      fetch('itinerary-data.html', {cache:'no-cache'})
-        .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
-        .then(inject)
-        .catch(function(){ showError('Gist 與本機檔案皆無法載入（' + err.message + '）'); });
-    });
+  fetch('itinerary-data.html')
+    .then(function(r){
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      return r.text();
+    })
+    .then(function(html){ inject(html); })
+    .catch(function(e){ showError(e.message); });
 })();
 </script>
 
