@@ -314,525 +314,14 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
 </section>
 
 <!-- ══════════════════ NAV ══════════════════ -->
-<nav class="day-nav">
-  <a href="#d1" class="n1">第一天 ✈ 抵達初探</a>
-  <a href="#d2" class="n2">第二天 🪖🚣 古芝 · 湄公河</a>
-  <a href="#d3" class="n3">第三天 🏛 堤岸 · 歷史散策</a>
-  <a href="#d4" class="n4">第四天 ✈ 返台</a>
+<nav class="day-nav" id="day-nav">
+  <!-- 由 Gist 動態載入 -->
 </nav>
 
-<!-- ══════════════════ DAY 1 ══════════════════ -->
-<section id="d1">
-  <div class="day-hdr dh1">
-    <div class="dh-num">DAY 01 · 第一天</div>
-    <h2 class="dh-title">抵達 · 市中心初探 🌿</h2>
-    <p class="dh-desc">中午抵達後輕鬆遊覽第一郡精華景點，傍晚品嚐道地越南料理，夜遊裴援徒步街感受南洋熱帶氛圍。</p>
-    <p class="dh-timeline">
-      ✈ 07:45 台灣出發&nbsp;&nbsp;→&nbsp;&nbsp;🛬 10:20 抵達胡志明市&nbsp;&nbsp;→&nbsp;&nbsp;🏨 Check in 飯店（建議第一郡）<br>
-      🕐 13:00 開始行程
-    </p>
-    <div class="dh-accent">1</div>
-  </div>
+<div id="itinerary-root">
+  <div id="itinerary-loading" style="text-align:center;padding:80px 20px;color:rgba(255,255,255,.4);font-family:'Lato',sans-serif;">⏳ 行程資料載入中…</div>
+</div>
 
-  <div class="stops">
-
-    <!-- 飯店 Check in -->
-    <div class="card">
-      <div class="pic-wrap" style="background:linear-gradient(135deg,#071a14 0%,#0d3022 50%,#1a4a3a 100%);display:flex;align-items:center;justify-content:center;">
-        <div class="num-badge">1</div>
-        <span style="font-size:4.5rem;line-height:1;">🏨</span>
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag th">🏨 住宿</span><span class="tag ts">🧳 行李寄放</span></div>
-        <div class="row-top">
-          <div><div class="cname">前往飯店 Check in · 寄放行李</div><div class="cvname">建議下榻第一郡（Quận 1）· 各景點 15 分鐘車程內</div></div>
-        </div>
-        <div class="info">
-          <span>🕐 抵達機場後搭 Grab 直奔飯店，約 10:20–11:30 抵達</span>
-          <span>📍 建議訂阮惠步行街、范五老街或濱城市場附近的飯店</span>
-        </div>
-        <p class="desc">從新山一機場出發，搭 Grab 直接前往飯店。<strong>若尚未到 Check in 時間（通常 14:00）</strong>，可先辦理行李寄存，輕裝出發開始下午行程。建議一抵達便確認房間樓層與周邊地圖，方便後續自行活動。</p>
-        <div class="chips"><span class="chip">🚗 機場→飯店 Grab 約 30–45 分</span><span class="chip b">🧳 行李可先寄放</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行 / Grab</strong>&nbsp;前往咖啡公寓&nbsp;<span class="gc">≈ 5–15 分鐘</span></div><div class="xline"></div></div>
-
-    <!-- 咖啡公寓 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">2</div>
-        <img src="images/01_cafe_apartment.jpg" alt="咖啡公寓" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag ts">☕ 咖啡</span><span class="tag ts">📸 打卡熱點</span></div>
-        <div class="row-top">
-          <div><div class="cname">咖啡公寓</div><div class="cvname">The Café Apartment · 42 Nguyễn Huệ, Quận 1</div></div>
-          <div class="rating">⭐ 4.4 <span>(1,594則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 08:00 – 00:00（全週開放）</span>
-          <span>📍 第一郡阮惠步行街上，各景點步行可達</span>
-        </div>
-        <p class="desc">老舊公寓改建的 <strong>8 層樓垂直咖啡街</strong>，每層有截然不同風格的咖啡廳、精品店與餐廳。強烈建議<strong>走樓梯</strong>逐層探索，比搭電梯更能感受每層的驚喜！電梯需另付費約 30,000 VND/人。是胡志明市最具代表性的 Instagram 打卡景點，俯瞰阮惠步行街的視角絕美。</p>
-        <div class="chips"><span class="chip">🏢 8層各異主題</span><span class="chip">🌆 俯瞰步行街</span><span class="chip">🎨 精品小店</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 5 分鐘</div><div class="xline"></div></div>
-
-    <!-- 書街 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">3</div>
-        <img src="images/02_book_street.jpg" alt="書街" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag ts">📚 文化</span><span class="tag tm">🎁 伴手禮</span></div>
-        <div class="row-top">
-          <div><div class="cname">胡志明市書街</div><div class="cvname">Đường Sách · 2 Nguyễn Văn Bình, Quận 1</div></div>
-          <div class="rating">⭐ 4.6 <span>(12,217則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 08:00 – 21:00（全週，夜晚燈飾更美）</span>
-          <span>📍 西貢郵政局旁，步行即達</span>
-        </div>
-        <p class="desc">胡志明市最有文青氣息的書市街道，沿途多家獨立書店、明信片攤和越南文創商品。夜晚串燈點亮後更加浪漫迷人。可在此<strong>選購明信片寄回台灣</strong>，也有英文越南旅遊書可帶走當紀念。</p>
-        <div class="chips"><span class="chip">✉️ 明信片寄台灣</span><span class="chip b">🎨 越南文創品</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 3 分鐘</div><div class="xline"></div></div>
-
-    <!-- 郵政局 + 聖母教堂 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">4</div>
-        <img src="images/03_post_office.jpg" alt="西貢郵政局" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag th">🏛️ 歷史建築</span><span class="tag ts">⛪ 宗教</span></div>
-        <div class="row-top">
-          <div><div class="cname">西貢中心郵政局 + 聖母教堂</div><div class="cvname">Bưu điện Trung tâm Sài Gòn · 02 Công trường Công xã Paris, Q.1</div></div>
-          <div class="rating">⭐ 4.4 <span>(5,424則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 平日 07:30–18:00 ｜ 週日 08:00–17:00</span>
-          <span>📍 兩景點僅相距 50 公尺，一次參觀兩個</span>
-        </div>
-        <p class="desc">1886年法國殖民時期建造的宏偉郵政局，<strong>優雅鑄鐵拱形天花板</strong>至今令人嘆為觀止，功能完整至今仍在運作。隔壁的<strong>聖母教堂（Notre-Dame）</strong>正在整修中，但外觀仍值得拍照留念。可在郵局選購越南特色切花郵票，寄明信片回台灣是很有紀念意義的體驗！</p>
-        <div class="chips"><span class="chip">📮 寄明信片回台灣</span><span class="chip b">🏛️ 法式拱頂建築</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 5 分鐘&nbsp;<span class="gc">≈ 45,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- Hoang's Kitchen -->
-    <div class="card rest">
-      <div class="pic-wrap">
-        <div class="num-badge">🍽️</div>
-        <img src="images/04_hoangs_kitchen.jpg" alt="Hoang's Kitchen" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tf">🍜 晚餐</span><span class="tag tf">🥗 蔬食友善</span></div>
-        <div class="row-top">
-          <div><div class="cname">Hoang's Kitchen</div><div class="cvname">Vietnamese Cuisine & Vegan Food · 13/1 Lê Thánh Tôn, Q.1</div></div>
-          <div class="rating">⭐ 4.9 <span>(710則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 10:30 – 23:30（全週開放）</span>
-          <span>📞 +84 912 993 203 ｜ 英語服務流利</span>
-        </div>
-        <p class="desc">評分高達 <strong>4.9 顆星</strong>的超人氣越南家常料理！炸春捲酥脆多汁、豬肉湯頭濃郁鮮美。特別推薦：兼有完整的<strong>蔬食（Vegan）選項</strong>，全家一起用餐完全沒有問題。服務生英語流利，點餐輕鬆無障礙。</p>
-        <div class="chips"><span class="chip">🥟 炸春捲</span><span class="chip">🍖 烤豬肉</span><span class="chip">🥗 蔬食選項</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 10 分鐘&nbsp;<span class="gc">≈ 90,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- 裴援徒步街 -->
-    <div class="card nite">
-      <div class="pic-wrap">
-        <div class="num-badge">🌃</div>
-        <img src="images/05_bui_vien.jpg" alt="裴援徒步街" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tn">🌃 夜生活</span><span class="tag tn">🎵 現場音樂</span></div>
-        <div class="row-top">
-          <div><div class="cname">裴援徒步街</div><div class="cvname">Bùi Viện Walking Street · Phường Phạm Ngũ Lão, Q.1</div></div>
-          <div class="rating">⭐ 4.3 <span>(26,212則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 全天開放 · 🌟 最佳時段：每晚 19:00 後封街</span>
-          <span>📍 第一郡背包客區核心地帶</span>
-        </div>
-        <p class="desc">胡志明市最熱鬧的夜市徒步街！每晚 7 點起封街成行人專區，霓虹燈光閃爍、現場音樂演奏不間斷，路邊酒吧「買一送一」啤酒優惠隨處可見。帶小孩感受南洋夜生活氣氛即可，<strong>建議不要超過 21:00</strong>，保留體力迎接第二天行程。</p>
-        <div class="chips"><span class="chip">🍺 買一送一啤酒</span><span class="chip">🎸 現場音樂</span><span class="chip">💡 霓虹燈光秀</span></div>
-      </div>
-    </div>
-
-  </div><!-- /stops -->
-</section>
-
-<!-- ══════════════════ DAY 2 ══════════════════ -->
-<section id="d2">
-  <div class="day-hdr dh2">
-    <div class="dh-num">DAY 02 · 第二天</div>
-    <h2 class="dh-title">古芝地道 · 湄公河三角洲 🪖🚣</h2>
-    <p class="dh-desc">包車私人導覽一日遊：上午探索越戰歷史古芝地道地下隧道，下午轉往湄公河三角洲體驗竹筏水鄉、椰林農家，感受南越兩大自然人文精華。</p>
-    <p class="dh-timeline">🚗 07:30 包車出發 → 🪖 古芝地道（上午）&nbsp;&nbsp;→&nbsp;&nbsp;🚗 前往湄公河（午後）&nbsp;&nbsp;→&nbsp;&nbsp;🌙 19:00 返回市區</p>
-    <div class="dh-accent">2</div>
-  </div>
-
-  <div class="stops">
-
-    <!-- 古芝地道 daytrip -->
-    <div class="dt-wrap" style="padding:0;">
-    <div class="dt-inner">
-      <div class="dt-img">
-        <img src="images/古芝地道.jpg" alt="古芝地道" loading="lazy">
-        <div class="dt-overlay">
-          <h3>古芝地道<br><span style="font-size:1rem;color:rgba(255,255,255,.7);font-family:'Noto Sans TC',sans-serif;font-weight:300;">Cu Chi Tunnels · 越戰地下隧道系統</span></h3>
-        </div>
-      </div>
-      <div class="dt-body">
-        <p class="dt-note">採<strong>包車私人導覽</strong>出發，全程專屬司機與導遊陪同。古芝地道距胡志明市約 70 公里，車程約 1.5 小時，建議 <strong>07:30 從飯店出發</strong>，上午參觀完畢約 11:30–12:00，包車再前往湄公河方向。<br><br>
-        ⚠️ 隧道空間狹窄，有幽閉恐懼症者可選擇在外圍參觀陷阱展示區；孩子通常非常喜歡戶外展示部分。</p>
-        <div class="dt-grid">
-          <div class="act"><span class="e">🔦</span> 爬行真實地下隧道</div>
-          <div class="act"><span class="e">🗺️</span> 私人導覽越戰歷史</div>
-          <div class="act"><span class="e">🌿</span> 叢林陷阱實地解說</div>
-          <div class="act"><span class="e">🎯</span> 射擊場體驗（可選）</div>
-          <div class="act"><span class="e">🍠</span> 品嚐游擊隊糧食木薯</div>
-          <div class="act"><span class="e">🎬</span> 觀看越戰歷史影片</div>
-          <div class="act"><span class="e">🚗</span> 專屬包車來回接送</div>
-          <div class="act"><span class="e">👶</span> 戶外展區適合帶孩子</div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-  </div>
-
-  <div class="xport" style="max-width:960px;margin:0 auto;"><div class="xline"></div><div class="xbadge">🚗 <strong>包車轉往</strong>&nbsp;湄公河三角洲 約 2.5 小時&nbsp;<span class="gc">沿途午餐休息</span></div><div class="xline"></div></div>
-
-  <div class="stops" style="padding-top:0;">
-
-    <!-- 湄公河 daytrip -->
-    <div class="dt-wrap" style="padding:0;">
-    <div class="dt-inner">
-      <div class="dt-img">
-        <img src="images/12_mekong_delta.jpg" alt="湄公河" loading="lazy">
-        <div class="dt-overlay">
-          <h3>湄公河三角洲一日遊<br><span style="font-size:1rem;color:rgba(255,255,255,.7);font-family:'Noto Sans TC',sans-serif;font-weight:300;">My Tho / Ben Tre · 全程 10–11 小時</span></h3>
-        </div>
-      </div>
-      <div class="dt-body">
-        <p class="dt-note">適合各年齡層，孩子尤其喜歡划竹筏和餵食動物的體驗！<br><br>
-        ⚠️ 需提前預訂，旺季（11–4月）容易額滿。</p>
-        <div class="dt-grid">
-          <div class="act"><span class="e">⛵</span> 搭大船遊湄公河主流</div>
-          <div class="act"><span class="e">🎋</span> 竹筏穿越椰林水道</div>
-          <div class="act"><span class="e">🥥</span> 參觀椰糖工廠</div>
-          <div class="act"><span class="e">🍍</span> 品嚐熱帶水果盤</div>
-          <div class="act"><span class="e">🍱</span> 傳統農家午餐</div>
-          <div class="act"><span class="e">🐍</span> 農村生態體驗</div>
-          <div class="act"><span class="e">🎵</span> 南越傳統音樂表演</div>
-          <div class="act"><span class="e">🌾</span> 水鄉風光欣賞</div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-  </div>
-
-  <div class="xport" style="max-width:960px;margin:0 auto;"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;返回市區約 10 分鐘&nbsp;<span class="gc">≈ 75,000 VND</span></div><div class="xline"></div></div>
-
-  <div class="stops" style="padding-top:0;">
-    <!-- Quan Ngon -->
-    <div class="card rest">
-      <div class="pic-wrap">
-        <div class="num-badge">🍜</div>
-        <img src="images/13_quan_ngon.jpg" alt="Quán Ngon" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tf">🍜 晚餐</span><span class="tag tf">🥢 北越米線</span></div>
-        <div class="row-top">
-          <div><div class="cname">Quán Ngon - Bún Chả Hà Nội</div><div class="cvname">越南米線 · 209 Đề Thám, Quận 1</div></div>
-          <div class="rating">⭐ 4.8 <span>(1,924則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 09:30 – 22:30（全週）</span>
-          <span>📞 +84 971 718 888 ｜ 裴援街旁，地點超便利</span>
-        </div>
-        <p class="desc">道地<strong>北越河內米線（Bún Chả Hà Nội）</strong>！香氣四溢的炭烤豬肉搭配新鮮米線，配以清爽魚露湯底，令人回味無窮。份量非常慷慨，<strong>建議一份二人分食</strong>，可再多點一份越式春捲（Chả Giò）。位在裴援街旁，用餐後可順便夜遊。</p>
-        <div class="chips"><span class="chip">🥩 炭烤豬肉</span><span class="chip">🍜 新鮮米線</span><span class="chip b">💡 份量超大可分食</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ DAY 3 ══════════════════ -->
-<section id="d3">
-  <div class="day-hdr dh3">
-    <div class="dh-num">DAY 03 · 第三天</div>
-    <h2 class="dh-title">堤岸華人區 · 歷史散策 🏛</h2>
-    <p class="dh-desc">深入胡志明市第五郡唐人街，探訪百年廣東會館、殖民騎樓老巷與中西融合教堂，下午轉往市區粉色教堂、傳統市場及戰爭博物館，晚享米其林推薦餐廳。</p>
-    <p class="dh-timeline">🏛 09:00 前往堤岸 → 穗城會館・豪士坊・譚神父教堂&nbsp;&nbsp;→&nbsp;&nbsp;🌆 下午市區歷史景點 → 🍽️ 晚餐</p>
-    <div class="dh-accent">3</div>
-  </div>
-
-  <div class="stops">
-
-    <!-- 穗城會館 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">1</div>
-        <img src="images/穗城會館(天后宮).jpg" alt="穗城會館天后宮" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag th">🏛️ 廣東會館</span><span class="tag ts">🙏 媽祖信仰</span><span class="tag ts">📸 打卡</span></div>
-        <div class="row-top">
-          <div><div class="cname">穗城會館（天后宮）</div><div class="cvname">Hội Quán Tuệ Thành · 756 Nguyễn Trãi, Quận 5</div></div>
-          <div class="rating">⭐ 4.5 <span>(12,000+ 則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 06:00 – 17:30（全週開放）</span>
-          <span>📍 第五郡 · 堤岸唐人街核心 · 建議停留 30–45 分鐘</span>
-        </div>
-        <p class="desc">建於1760年代，由廣東移民社群出資修建，供奉海上保護神媽祖（天后）。<strong>屋頂以精緻陶瓷人物裝飾</strong>，呈現三國演義與民俗故事場景，工藝細膩令人嘆為觀止。殿內香煙裊裊、龍鳳彩繪，是堤岸最具代表性的中國式廟宇建築，攝影效果極佳。免費入場。</p>
-        <div class="chips"><span class="chip">🐉 精緻陶瓷屋頂裝飾</span><span class="chip">⛵ 媽祖海神信仰</span><span class="chip b">🎨 廣東移民文化遺產</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 5 分鐘（400公尺）</div><div class="xline"></div></div>
-
-    <!-- 豪士坊 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">2</div>
-        <img src="images/豪士坊.jpg" alt="豪士坊" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag th">🏘️ 百年老巷</span><span class="tag ts">🎨 彩色騎樓</span><span class="tag ts">📸 免費打卡</span></div>
-        <div class="row-top">
-          <div><div class="cname">豪士坊</div><div class="cvname">Hẻm Hào Sĩ Phường · Alley 206 Trần Hưng Đạo B, Quận 5</div></div>
-          <div class="rating">⭐ 4.3 <span></span></div>
-        </div>
-        <div class="info">
-          <span>🕐 全天開放（店家約 07:00–18:00）</span>
-          <span>📍 第五郡 · 距穗城會館步行 5 分鐘 · 建議停留 20–30 分鐘</span>
-        </div>
-        <p class="desc">建於1910年代的百年舊街，是堤岸區保存最完整的舊式騎樓建築群。<strong>彩色外牆、狹長窄巷、港式生活氣息</strong>，讓人彷彿置身老香港街道。早上人潮較少、光線柔和，是拍攝復古建築的最佳時機。完全免費參觀，輕鬆隨意漫步即可。</p>
-        <div class="chips"><span class="chip">🏘️ 百年殖民建築群</span><span class="chip">📷 老香港復古氛圍</span><span class="chip b">🚶 免費 · 步行即可</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 8 分鐘（650公尺）</div><div class="xline"></div></div>
-
-    <!-- 譚神父教堂 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">3</div>
-        <img src="images/聖方濟各沙勿略教堂.jpg" alt="譚神父教堂" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag th">⛪ 天主教堂</span><span class="tag th">🏛️ 中西建築</span><span class="tag th">📚 歷史地標</span></div>
-        <div class="row-top">
-          <div><div class="cname">譚神父教堂（聖方濟各沙勿略堂）</div><div class="cvname">Nhà Thờ Cha Tam · 25 Học Lạc, Phường 14, Quận 5</div></div>
-          <div class="rating">⭐ 4.4 <span>(3,500+ 則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 07:00–12:00, 14:00–21:00（全週）</span>
-          <span>📍 第五郡 · 距豪士坊步行 8 分鐘 · 建議停留 20–30 分鐘</span>
-        </div>
-        <p class="desc">1902年落成，全越南最獨特的天主教堂之一。<strong>融合哥德式與中國傳統建築</strong>：八角形塔樓、陰陽太極裝飾、雙廊對稱格局，完美體現中西文化交融。教堂因歷史事件廣為人知：1963年南越總統吳廷琰政變時於此地被捕。外觀簡潔大方，是拍攝建築細節的好地點。</p>
-        <div class="chips"><span class="chip">⛪ 中西融合哥德式</span><span class="chip">🕰️ 落成於1902年</span><span class="chip b">📖 越戰歷史見證地</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 20 分鐘（跨郡）&nbsp;<span class="gc">≈ 75,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- 新定教堂 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">4</div>
-        <img src="images/06_tan_dinh_church.jpg" alt="新定教堂" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag ts">⛪ 宗教景點</span><span class="tag th">🏛️ 法式殖民</span><span class="tag ts">📸 打卡</span></div>
-        <div class="row-top">
-          <div><div class="cname">新定教堂（粉色教堂）</div><div class="cvname">Nhà Thờ Tân Định · 289 Hai Bà Trưng, Quận 3</div></div>
-          <div class="rating">⭐ 4.4 <span>(8,876則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 平日 08:00–11:00, 14:00–17:00 ｜ ⚠️ 週六不開放</span>
-          <span>📍 第三郡海霸翁路 289 號 · 距市場步行 3 分鐘</span>
-        </div>
-        <p class="desc">1870年代法國殖民時期建造的天主教堂，全胡志明市最夢幻的地標之一！<strong>哥德式羅馬風格搭配大膽的鮮豔粉紅色外觀</strong>，在南亞天主教堂中絕無僅有。⚠️ 目前部分整修中，出發前建議確認開放狀況；週六固定不開放。整修期間外觀仍可拍照打卡。</p>
-        <div class="chips"><span class="chip">🌸 全市最夢幻粉色</span><span class="chip b">📿 1870年代法式殖民建築</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚶 <strong>步行</strong>&nbsp;約 3 分鐘（300公尺）</div><div class="xline"></div></div>
-
-    <!-- 新定市場 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">5</div>
-        <img src="images/07_tan_dinh_market.jpg" alt="新定市場" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tm">🛒 傳統市場</span><span class="tag tm">🎁 伴手禮</span></div>
-        <div class="row-top">
-          <div><div class="cname">新定市場</div><div class="cvname">Chợ Tân Định · 314-336 Hai Bà Trưng, Quận 3</div></div>
-          <div class="rating">⭐ 4.2 <span>(10,151則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 06:00 – 18:00（全週開放）</span>
-          <span>📍 與粉色教堂同條街，步行 3 分鐘內</span>
-        </div>
-        <p class="desc">與粉色教堂僅 300 公尺的傳統在地市場，販售乾果腰果、布料服飾及越南傳統服飾（Áo dài）等。<strong>有攤販說普通話、廣東話</strong>，溝通非常方便！記得嚐試現榨新鮮果汁。推薦購買：帶殼腰果（100g/25,000 VND）、龍眼乾、腰果糖。</p>
-        <div class="chips"><span class="chip">🥜 在地帶殼腰果</span><span class="chip">🧃 現榨鮮果汁</span><span class="chip b">👘 越南傳統服飾</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 10 分鐘&nbsp;<span class="gc">≈ 75,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- 戰爭博物館 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">6</div>
-        <img src="images/08_war_museum.jpg" alt="戰爭博物館" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag th">🏛️ 歷史博物館</span><span class="tag th">🪖 越戰歷史</span></div>
-        <div class="row-top">
-          <div><div class="cname">戰爭博物館</div><div class="cvname">Bảo tàng Chứng tích Chiến tranh · Phường 6, Quận 3</div></div>
-          <div class="rating">⭐ 4.5 <span>(40,317則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 07:30 – 17:30（全週開放，不休館）</span>
-          <span>📍 第三郡 · 建議停留 1.5–2 小時</span>
-        </div>
-        <p class="desc">越戰歷史<strong>必訪場館</strong>，館外真實展示戰車、戰鬥機、大砲等軍事武器，館內有豐富歷史照片文獻。部分展區畫面較衝擊（橙劑效應、傷亡紀錄），<strong>帶孩子建議選擇性參觀一樓的戰爭器械戶外展區</strong>，避開較血腥的樓層。參觀後對越戰歷史會有全新的認識與感受。</p>
-        <div class="chips"><span class="chip">🪖 真實戰爭武器</span><span class="chip b">⏱️ 建議留 1.5-2 小時</span><span class="chip">👧 帶孩子選樓層</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 5 分鐘&nbsp;<span class="gc">≈ 45,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- 錦麗河粉 -->
-    <div class="card rest">
-      <div class="pic-wrap">
-        <div class="num-badge">🍜</div>
-        <img src="images/09_pho_le.jpg" alt="錦麗河粉" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tf">🍜 午餐</span><span class="tag tf">⭐ 米其林推薦</span></div>
-        <div class="row-top">
-          <div><div class="cname">錦麗河粉</div><div class="cvname">Phở Lệ · 303-305 Võ Văn Tần, Quận 3</div></div>
-          <div class="rating">⭐ 4.2 <span>(2,132則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 07:00 – 22:00（全週）</span>
-          <span>📞 +84 908 130 100 ｜ 距戰爭博物館 5 分鐘車程</span>
-        </div>
-        <p class="desc">米其林推薦的胡志明市知名<strong>牛肉河粉老店</strong>。湯頭以牛大骨長時間熬製，清甜不腥；牛肉新鮮鮮嫩，配上豐富香草更添層次風味。建議點「牛腩混合（Phở Tái Nạm）」，料最豐富。早點去不需排隊，份量十足。</p>
-        <div class="chips"><span class="chip">🥩 牛骨清甜湯底</span><span class="chip b">🌿 新鮮香草配料</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 10 分鐘&nbsp;<span class="gc">≈ 75,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- 范五老街 -->
-    <div class="card">
-      <div class="pic-wrap">
-        <div class="num-badge">7</div>
-        <img src="images/10_pham_ngu_lao.jpg" alt="范五老街" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tm">🛍️ 購物</span><span class="tag ts">☕ 咖啡廳</span></div>
-        <div class="row-top">
-          <div><div class="cname">范五老街</div><div class="cvname">Phạm Ngũ Lão Street · Quận 1</div></div>
-          <div class="rating">⭐ 4.5 <span></span></div>
-        </div>
-        <div class="info">
-          <span>🕐 全天開放（商家大多 09:00 – 22:00）</span>
-          <span>📍 第一郡背包客區 · 裴援徒步街附近</span>
-        </div>
-        <p class="desc">胡志明市最著名的背包客聚集區，各式越南咖啡館、紀念品店、小吃攤集中，是<strong>採購伴手禮的絕佳地點</strong>。推薦必買：越南咖啡豆（G7/Trung Nguyên）、蛋咖啡豆、椰子糖、辣椒醬。可順逛旁邊的裴援街感受下午的悠閒氛圍。</p>
-        <div class="chips"><span class="chip">☕ 越南咖啡豆</span><span class="chip">🌶️ 辣椒醬</span><span class="chip b">🥥 椰子糖</span></div>
-      </div>
-    </div>
-
-    <div class="xport"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;約 5 分鐘&nbsp;<span class="gc">≈ 45,000 VND</span></div><div class="xline"></div></div>
-
-    <!-- 胖媽廚房 -->
-    <div class="card rest">
-      <div class="pic-wrap">
-        <div class="num-badge">🍽️</div>
-        <img src="images/11_bep_me_in.jpg" alt="胖媽廚房" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="tags"><span class="tag tf">🍽️ 晚餐</span><span class="tag tf">⭐ 米其林推薦</span></div>
-        <div class="row-top">
-          <div><div class="cname">胖媽廚房</div><div class="cvname">Bếp Mẹ Ín · 136/9 Lê Thánh Tôn, Quận 1</div></div>
-          <div class="rating">⭐ 4.5 <span>(11,380則評論)</span></div>
-        </div>
-        <div class="info">
-          <span>🕐 10:30 – 22:30（全週）</span>
-          <span>📞 +84 28 2211 1119 ｜ ⚠️ 強烈建議提前訂位，尤其週末</span>
-        </div>
-        <p class="desc">米其林推薦的越南家常料理！以家庭私廚風格著稱，每道菜都充滿溫暖家鄉滋味。<strong>招牌越式薄餅（Bánh Xèo）</strong>皮薄酥脆、內餡飽滿，是必點菜色。椰子炒飯香氣誘人，炭烤牛肉串外焦內嫩，全家人都愛！週末非常熱門，建議提前訂位。</p>
-        <div class="chips"><span class="chip">🥥 椰子炒飯</span><span class="chip">🥞 越式薄餅 Bánh Xèo</span><span class="chip b">🥩 炭烤牛肉串</span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════ DAY 4 ══════════════════ -->
-<section id="d4">
-  <div class="day-hdr dh4">
-    <div class="dh-num">DAY 04 · 第四天</div>
-    <h2 class="dh-title">輕鬆早晨 · 採購返台 ✈</h2>
-    <p class="dh-desc">早晨自由活動把握最後機會採購伴手禮，中午收拾行李，13:00 前往新山一機場搭乘返台班機。</p>
-    <p class="dh-timeline">🛍️ 09:00 採購&nbsp;&nbsp;→&nbsp;&nbsp;🧳 12:00 回飯店&nbsp;&nbsp;→&nbsp;&nbsp;🚗 13:00 前往機場&nbsp;&nbsp;→&nbsp;&nbsp;✈ 下午 返台</p>
-    <div class="dh-accent">4</div>
-  </div>
-
-  <div class="d4-card">
-    <div class="d4-inner">
-      <div class="tags"><span class="tag tm">🛍️ 最後採購</span><span class="tag ts">☕ 告別早餐</span></div>
-      <div style="margin-top:14px;">
-        <div class="cname" style="margin-bottom:6px;">早上自由活動：書街 / 范五老街補購伴手禮</div>
-        <p class="desc">把握返台前的最後時光，前往書街或范五老街採購越南特色伴手禮。以下是最推薦的採購清單：</p>
-      </div>
-      <div class="shop-grid">
-        <div class="shop-item"><span style="font-size:1.3rem;">☕</span> 越南咖啡豆</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🌶️</span> 辣椒醬 / 蝦醬</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🥜</span> 帶殼腰果</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🍵</span> 越南蓮花茶</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🌿</span> 胡椒粒（富國島）</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🧴</span> 虎標萬金油</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🥥</span> 椰子糖 / 椰奶</div>
-        <div class="shop-item"><span style="font-size:1.3rem;">🎨</span> 越南漆器工藝品</div>
-      </div>
-    </div>
-
-    <div class="xport" style="padding:24px 0;max-width:100%;"><div class="xline"></div><div class="xbadge">🚗 <strong>Grab 車</strong>&nbsp;前往新山一機場約 30–45 分鐘&nbsp;<span class="gc">⚠️ 建議 13:00 從飯店出發</span></div><div class="xline"></div></div>
-
-    <div class="flight-box">
-      <div class="fe">✈️</div>
-      <h3>下午班機 · 返台</h3>
-      <p>新山一國際機場（Sân bay Tân Sơn Nhất / SGN）<br>→ 台北桃園 TPE<br><br>
-      市區至機場約 30–45 分鐘（視塞車狀況），<br>建議 13:00 準時出發，預留充裕時間辦理登機手續。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ TIPS ══════════════════ -->
 <section class="tips-sec">
   <h2 class="tips-ttl">旅遊實用小提醒 💡</h2>
   <div class="tips-grid">
@@ -1101,6 +590,49 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
     vnd.value=isNaN(v)?'':fmt(v*R_USD_VND,0);
     lock=false;
   });
+})();
+</script>
+
+<!-- ── ITINERARY LOADER ──────────────────────────────────── -->
+<script>
+(function(){
+  var GIST_URL = 'https://gist.githubusercontent.com/t5749850-glitch/8d7c2b26ccd5d53fce169a2ee712e6da/raw/itinerary-data.html';
+
+  var root = document.getElementById('itinerary-root');
+  var nav  = document.getElementById('day-nav');
+
+  function inject(html){
+    var navMatch = html.match(/<!-- nav -->([\s\S]*?)<!-- \/nav -->/);
+    if(navMatch && nav) nav.innerHTML = navMatch[1];
+
+    var secMatch = html.match(/<!-- sections -->([\s\S]*?)<!-- \/sections -->/);
+    if(secMatch && root){
+      root.innerHTML = secMatch[1];
+      root.querySelectorAll('script').forEach(function(s){
+        var ns = document.createElement('script');
+        ns.textContent = s.textContent;
+        document.body.appendChild(ns);
+      });
+    }
+  }
+
+  function showError(msg){
+    if(root) root.innerHTML =
+      '<p style="text-align:center;padding:60px 20px;color:rgba(255,255,255,.4);font-family:Lato,sans-serif;">' +
+      '⚠️ 行程資料載入失敗<br><small style="font-size:.8rem;opacity:.6;">' + msg + '</small></p>';
+  }
+
+  // 永遠先嘗試 Gist（支援 CORS，本機也能用）
+  fetch(GIST_URL, {cache:'no-cache'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+    .then(inject)
+    .catch(function(err){
+      // Gist 失敗時（例如本機無網路）再嘗試讀同目錄
+      fetch('itinerary-data.html', {cache:'no-cache'})
+        .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+        .then(inject)
+        .catch(function(){ showError('Gist 與本機檔案皆無法載入（' + err.message + '）'); });
+    });
 })();
 </script>
 
