@@ -224,8 +224,9 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
   font-family:'Playfair Display',serif;font-size:2.2rem;
   color:var(--gold-l);text-align:center;margin-bottom:44px;
 }
-.tips-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.tips-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:22px;}
 .tip{background:rgba(255,255,255,.04);border:1px solid rgba(201,160,40,.18);border-radius:14px;padding:26px;}
+.tip-wide{grid-column:1 / -1;}
 .tip-i{font-size:2rem;margin-bottom:12px;}
 .tip-t{font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:.9rem;color:var(--gold-l);margin-bottom:8px;}
 .tip-c{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.75;}
@@ -242,9 +243,14 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
   .dt-wrap{padding:0 16px;}
   .d4-card{padding:0 16px 32px;}
   .tips-sec{padding:56px 20px;}
+  .tips-grid{grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));}
 }
 
 /* Phablet (≤680px): stack cards */
+@media(max-width:768px){
+  .tips-grid{grid-template-columns:1fr;}
+}
+
 @media(max-width:680px){
   .card{grid-template-columns:1fr;}
   .pic-wrap{height:220px;}
@@ -337,7 +343,7 @@ body{font-family:'Lato','Noto Sans TC',sans-serif;background:var(--bg);color:var
 <section class="tips-sec">
   <h2 class="tips-ttl">旅遊實用小提醒 💡</h2>
   <div class="tips-grid">
-    <div class="tip" style="grid-column:span 3;">
+    <div class="tip tip-wide">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
         <div class="tip-i" style="margin:0;">💱</div>
         <div class="tip-t" style="margin:0;font-size:1rem;">即時貨幣雙向換算工具</div>
